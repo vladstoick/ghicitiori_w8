@@ -1,1 +1,1 @@
-C:\Users\Vlad\documents\visual studio 2012\Projects\Ghicitori\Ghicitori\Ghicitori.csproj;neutral
+C:\Programming\C#\Ghicitori\Ghicitori\Ghicitori.csproj;neutral

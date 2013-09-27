@@ -5,3 +5,5 @@ Assets\StoreLogo.png
 App.xaml
 Common\StandardStyles.xaml
 MainPage.xaml
+Pages\MainMenuPage.xaml
+Common\ReadMe.txt

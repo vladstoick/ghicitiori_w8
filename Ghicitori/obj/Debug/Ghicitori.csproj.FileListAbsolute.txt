@@ -25,3 +25,33 @@ C:\Users\Vlad\documents\visual studio 2012\Projects\Ghicitori\Ghicitori\obj\Debu
 C:\Users\Vlad\documents\visual studio 2012\Projects\Ghicitori\Ghicitori\obj\Debug\pri.resfiles
 C:\Users\Vlad\documents\visual studio 2012\Projects\Ghicitori\Ghicitori\obj\Debug\LanguageQualifiers.txt
 C:\Users\Vlad\documents\visual studio 2012\Projects\Ghicitori\Ghicitori\obj\Debug\ProjectArchitectures.txt
+C:\Programming\C#\Ghicitori\Ghicitori\bin\Debug\Ghicitori.exe
+C:\Programming\C#\Ghicitori\Ghicitori\bin\Debug\Ghicitori.pdb
+C:\Programming\C#\Ghicitori\Ghicitori\bin\Debug\resources.pri
+C:\Programming\C#\Ghicitori\Ghicitori\bin\Debug\AppxManifest.xml
+C:\Programming\C#\Ghicitori\Ghicitori\bin\Debug\Ghicitori.build.appxrecipe
+C:\Programming\C#\Ghicitori\Ghicitori\obj\Debug\App.g.i.cs
+C:\Programming\C#\Ghicitori\Ghicitori\obj\Debug\App.g.cs
+C:\Programming\C#\Ghicitori\Ghicitori\obj\Debug\Common\StandardStyles.g.i.cs
+C:\Programming\C#\Ghicitori\Ghicitori\obj\Debug\Common\StandardStyles.g.cs
+C:\Programming\C#\Ghicitori\Ghicitori\obj\Debug\MainPage.g.i.cs
+C:\Programming\C#\Ghicitori\Ghicitori\obj\Debug\MainPage.g.cs
+C:\Programming\C#\Ghicitori\Ghicitori\obj\Debug\Pages\MainMenuPage.g.i.cs
+C:\Programming\C#\Ghicitori\Ghicitori\obj\Debug\Pages\MainMenuPage.g.cs
+C:\Programming\C#\Ghicitori\Ghicitori\obj\Debug\XamlTypeInfo.g.cs
+C:\Programming\C#\Ghicitori\Ghicitori\obj\Debug\App.xaml
+C:\Programming\C#\Ghicitori\Ghicitori\obj\Debug\Common\StandardStyles.xaml
+C:\Programming\C#\Ghicitori\Ghicitori\obj\Debug\MainPage.xaml
+C:\Programming\C#\Ghicitori\Ghicitori\obj\Debug\Pages\MainMenuPage.xaml
+C:\Programming\C#\Ghicitori\Ghicitori\obj\Debug\Ghicitori.exe
+C:\Programming\C#\Ghicitori\Ghicitori\obj\Debug\Ghicitori.pdb
+C:\Programming\C#\Ghicitori\Ghicitori\obj\Debug\priconfig.xml.intermediate
+C:\Programming\C#\Ghicitori\Ghicitori\obj\Debug\layout.resfiles.intermediate
+C:\Programming\C#\Ghicitori\Ghicitori\obj\Debug\resources.resfiles.intermediate
+C:\Programming\C#\Ghicitori\Ghicitori\obj\Debug\pri.resfiles.intermediate
+C:\Programming\C#\Ghicitori\Ghicitori\obj\Debug\priconfig.xml
+C:\Programming\C#\Ghicitori\Ghicitori\obj\Debug\layout.resfiles
+C:\Programming\C#\Ghicitori\Ghicitori\obj\Debug\resources.resfiles
+C:\Programming\C#\Ghicitori\Ghicitori\obj\Debug\pri.resfiles
+C:\Programming\C#\Ghicitori\Ghicitori\obj\Debug\LanguageQualifiers.txt
+C:\Programming\C#\Ghicitori\Ghicitori\obj\Debug\ProjectArchitectures.txt
