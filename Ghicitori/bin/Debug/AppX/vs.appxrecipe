@@ -16,17 +16,29 @@
     <AppXManifest Include="C:\Programming\C#\Ghicitori\Ghicitori\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-09-27T15:41:04.505</Modified>
+      <Modified>2013-10-06T18:59:28.818</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Programming\C#\Ghicitori\Ghicitori\bin\Debug\Ghicitori.exe">
       <PackagePath>Ghicitori.exe</PackagePath>
-      <Modified>2013-09-27T15:58:08.376</Modified>
+      <Modified>2013-10-07T11:21:22.804</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Programming\C#\Ghicitori\Ghicitori\bin\Debug\Ghicitori.pdb">
       <PackagePath>Ghicitori.pdb</PackagePath>
-      <Modified>2013-09-27T15:58:08.359</Modified>
+      <Modified>2013-10-07T11:21:22.786</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Programming\C#\Ghicitori\packages\Newtonsoft.Json.5.0.6\lib\netcore45\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+      <Modified>2013-10-06T18:27:25.374</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Programming\C#\Ghicitori\Ghicitori\data.json">
+      <PackagePath>data.json</PackagePath>
+      <Modified>2013-10-07T11:04:49.497</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Programming\C#\Ghicitori\Ghicitori\Assets\black_lozenge_%402X.png">
+      <PackagePath>Assets\black_lozenge_%402X.png</PackagePath>
+      <Modified>2013-10-06T17:55:34.277</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Programming\C#\Ghicitori\Ghicitori\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
@@ -58,19 +70,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Programming\C#\Ghicitori\Ghicitori\bin\Debug\Common\StandardStyles.xaml">
       <PackagePath>Common\StandardStyles.xaml</PackagePath>
-      <Modified>2012-06-26T23:19:20.000</Modified>
+      <Modified>2013-10-07T11:21:20.368</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Programming\C#\Ghicitori\Ghicitori\bin\Debug\MainPage.xaml">
       <PackagePath>MainPage.xaml</PackagePath>
       <Modified>2013-09-27T14:32:21.915</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Programming\C#\Ghicitori\Ghicitori\bin\Debug\Pages\GhicitoriPage.xaml">
+      <PackagePath>Pages\GhicitoriPage.xaml</PackagePath>
+      <Modified>2013-10-07T11:20:04.238</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Programming\C#\Ghicitori\Ghicitori\bin\Debug\Pages\MainMenuPage.xaml">
       <PackagePath>Pages\MainMenuPage.xaml</PackagePath>
-      <Modified>2013-09-27T15:58:07.394</Modified>
+      <Modified>2013-10-06T18:10:28.342</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Programming\C#\Ghicitori\Ghicitori\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2013-09-27T15:41:04.436</Modified>
+      <Modified>2013-10-06T18:59:28.780</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

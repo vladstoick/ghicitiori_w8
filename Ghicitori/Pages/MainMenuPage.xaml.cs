@@ -48,5 +48,10 @@ namespace Ghicitori.Pages
         protected override void SaveState(Dictionary<String, Object> pageState)
         {
         }
+
+        private void NerezolvateButtonClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(GhicitoriPage));
+        }
     }
 }

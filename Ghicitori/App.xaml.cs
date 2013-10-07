@@ -1,4 +1,5 @@
-﻿using Ghicitori.Pages;
+﻿using Ghicitori.DataSource;
+using Ghicitori.Pages;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -24,6 +25,7 @@ namespace Ghicitori
     /// </summary>
     sealed partial class App : Application
     {
+        public static GhicitoriDataSource DataSource = new GhicitoriDataSource();
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().

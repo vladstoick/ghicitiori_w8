@@ -19,6 +19,15 @@
     <AppxPackagedFile Include="C:\Programming\C#\Ghicitori\Ghicitori\bin\Debug\Ghicitori.pdb">
       <PackagePath>Ghicitori.pdb</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Programming\C#\Ghicitori\packages\Newtonsoft.Json.5.0.6\lib\netcore45\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Programming\C#\Ghicitori\Ghicitori\data.json">
+      <PackagePath>data.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Programming\C#\Ghicitori\Ghicitori\Assets\black_lozenge_%402X.png">
+      <PackagePath>Assets\black_lozenge_%402X.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Programming\C#\Ghicitori\Ghicitori\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
@@ -46,6 +55,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Programming\C#\Ghicitori\Ghicitori\bin\Debug\MainPage.xaml">
       <PackagePath>MainPage.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Programming\C#\Ghicitori\Ghicitori\bin\Debug\Pages\GhicitoriPage.xaml">
+      <PackagePath>Pages\GhicitoriPage.xaml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Programming\C#\Ghicitori\Ghicitori\bin\Debug\Pages\MainMenuPage.xaml">
       <PackagePath>Pages\MainMenuPage.xaml</PackagePath>

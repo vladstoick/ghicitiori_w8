@@ -55,3 +55,11 @@ C:\Programming\C#\Ghicitori\Ghicitori\obj\Debug\resources.resfiles
 C:\Programming\C#\Ghicitori\Ghicitori\obj\Debug\pri.resfiles
 C:\Programming\C#\Ghicitori\Ghicitori\obj\Debug\LanguageQualifiers.txt
 C:\Programming\C#\Ghicitori\Ghicitori\obj\Debug\ProjectArchitectures.txt
+C:\Programming\C#\Ghicitori\Ghicitori\obj\Debug\Pages\GhicitoriPage.g.i.cs
+C:\Programming\C#\Ghicitori\Ghicitori\obj\Debug\Pages\GhicitoriPage.g.cs
+C:\Programming\C#\Ghicitori\Ghicitori\obj\Debug\Pages\GhicitoriPage.xaml
+C:\Programming\C#\Ghicitori\Ghicitori\bin\Debug\Newtonsoft.Json.dll
+C:\Programming\C#\Ghicitori\Ghicitori\bin\Debug\Newtonsoft.Json.xml
+C:\Programming\C#\Ghicitori\Ghicitori\obj\Debug\Ghicitori.csprojResolveAssemblyReference.cache
+C:\Programming\C#\Ghicitori\Ghicitori\obj\Debug\Ghicitori.csproj.GenerateResource.Cache
+C:\Programming\C#\Ghicitori\Ghicitori\bin\Debug\data.json

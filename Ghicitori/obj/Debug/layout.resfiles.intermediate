@@ -1,3 +1,4 @@
+Assets\black_lozenge_@2X.png
 Assets\Logo.png
 Assets\SmallLogo.png
 Assets\SplashScreen.png
@@ -5,5 +6,7 @@ Assets\StoreLogo.png
 App.xaml
 Common\StandardStyles.xaml
 MainPage.xaml
+Pages\GhicitoriPage.xaml
 Pages\MainMenuPage.xaml
 Common\ReadMe.txt
+data.json

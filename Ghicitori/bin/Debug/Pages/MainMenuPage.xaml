@@ -21,26 +21,27 @@
         * Row 0 contains the back button and page title
         * Row 1 contains the rest of the page layout
     -->
-    <Grid Style="{StaticResource LayoutRootStyle}">
+    <Grid Style="{StaticResource LayoutRootStyle}" Background="#FF1D1D1D">
         <Grid.RowDefinitions>
             <RowDefinition Height="140"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Grid x:Name="fullScreenMenu" Grid.Row="1" Width="600">
+        <Grid x:Name="fullScreenMenu" Grid.Row="1" Width="800">
             <Grid.RowDefinitions>
-                <RowDefinition Height="200"/>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="120">Ghicitori</TextBlock>
+            <StackPanel>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="120" FontFamily="Segoe Script" Margin="0,0,30,0">Ghicitori</TextBlock>
+                <TextBlock HorizontalAlignment="Center" FontSize="32" FontFamily="Segoe Script">Cele mai cunoscute ghicitori românești</TextBlock>
+            </StackPanel>
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="200"/>
-                    <ColumnDefinition Width="200"/>
-                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="400"/>
+                    <ColumnDefinition Width="400"/>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="0" Width="190" HorizontalAlignment="Center" Content="Nivele ușoare"></Button>
-                <Button Grid.Column="1" Width="190" HorizontalAlignment="Center" Content="Nivele medii"></Button>
-                <Button Grid.Column="2" Width="190" HorizontalAlignment="Center" Content="Ghicitori avansate"></Button>
+                <Button x:ConnectionId='1' Grid.Column="0" Width="280" HorizontalAlignment="Center" Content="Ghicitori nerezolvate"                               ></Button>
+                <Button Grid.Column="1" Width="280" HorizontalAlignment="Center" Content="Ghicitori deja rezolvate"></Button>
             </Grid>
         </Grid>
         <Grid x:Name="snappedMenu" Grid.Row="1" Visibility="Collapsed">
@@ -53,11 +54,10 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="50"/>
-                    <RowDefinition Height="50"/>
                    </Grid.RowDefinitions>
-                <Button Grid.Row="0" Width="190" HorizontalAlignment="Center" Content="Nivele ușoare"></Button>
-                <Button Grid.Row="1" Width="190" HorizontalAlignment="Center" Content="Nivele medii"></Button>
-                <Button Grid.Row="2" Width="190" HorizontalAlignment="Center" Content="Ghicitori avansate"></Button>
+                <Button Grid.Row="0" Width="190" HorizontalAlignment="Center" Content="Nerezolvate"></Button>
+                <Button Grid.Row="1" Width="190" HorizontalAlignment="Center" Content="Rezolvate"></Button>
+
             </Grid>
         </Grid>
         <VisualStateManager.VisualStateGroups>

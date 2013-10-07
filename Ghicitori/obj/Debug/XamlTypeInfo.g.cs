@@ -116,7 +116,9 @@ namespace Ghicitori.Ghicitori_XamlTypeInfo
 
         private object Activate_1_LayoutAwarePage() { return new global::Ghicitori.Common.LayoutAwarePage(); }
 
-        private object Activate_2_MainMenuPage() { return new global::Ghicitori.Pages.MainMenuPage(); }
+        private object Activate_2_GhicitoriPage() { return new global::Ghicitori.Pages.GhicitoriPage(); }
+
+        private object Activate_3_MainMenuPage() { return new global::Ghicitori.Pages.MainMenuPage(); }
 
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(string typeName)
@@ -146,9 +148,15 @@ namespace Ghicitori.Ghicitori_XamlTypeInfo
                 xamlType = userType;
                 break;
 
+            case "Ghicitori.Pages.GhicitoriPage":
+                userType = new global::Ghicitori.Ghicitori_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Ghicitori.Pages.GhicitoriPage), GetXamlTypeByName("Ghicitori.Common.LayoutAwarePage"));
+                userType.Activator = Activate_2_GhicitoriPage;
+                xamlType = userType;
+                break;
+
             case "Ghicitori.Pages.MainMenuPage":
                 userType = new global::Ghicitori.Ghicitori_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Ghicitori.Pages.MainMenuPage), GetXamlTypeByName("Ghicitori.Common.LayoutAwarePage"));
-                userType.Activator = Activate_2_MainMenuPage;
+                userType.Activator = Activate_3_MainMenuPage;
                 xamlType = userType;
                 break;
 
