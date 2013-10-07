@@ -19,7 +19,7 @@ namespace Ghicitori.DataSource
         {
             get
             {
-                List<Ghicitoare>  ghlist = ToateGhicitorile.Where(gh => gh.isResoleved == false).ToList();
+                List<Ghicitoare>  ghlist = ToateGhicitorile.Where(gh => gh.isResoleved == false).OrderBy(gh=> gh.Id).ToList();
                 ObservableCollection<Ghicitoare> ghobs = new ObservableCollection<Ghicitoare>();
                 foreach (Ghicitoare gh in ghlist)
                 {
