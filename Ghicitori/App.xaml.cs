@@ -93,7 +93,7 @@ namespace Ghicitori
             {
                 localSettings.Values.Remove("ghicitori");
             }
-            localSettings.Values["ghicitori"] = serialized;
+            localSettings.Values.Add("ghicitori", serialized);
             //TODO: Save application state and stop any background activity
             deferral.Complete();
         }

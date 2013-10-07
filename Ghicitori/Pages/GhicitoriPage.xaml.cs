@@ -53,12 +53,15 @@ namespace Ghicitori.Pages
                 await App.DataSource.LoadData();
             }
             if (navigationParameter == "nerezolvate")
+
             {
+                pageTitle.Text = "Nerezolvatee";
                 Data = App.DataSource.GhicitoriNerezolvate;
             }
             else
             {
                 Data = App.DataSource.GhicitoriRezolvate;
+                pageTitle.Text = "Rezolvate";
             }
             this.DefaultViewModel["Items"] = Data;
             if (pageState == null)
