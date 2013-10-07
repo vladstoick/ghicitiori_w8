@@ -47,11 +47,19 @@ namespace Ghicitori.Pages
         {
             // TODO: Assign a bindable group to this.DefaultViewModel["Group"]
             // TODO: Assign a collection of bindable items to this.DefaultViewModel["Items"]
+
             if (App.DataSource.isDataLoaded == false)
             {
                 await App.DataSource.LoadData();
             }
-            Data = App.DataSource.GhicitoriNerezolvate;
+            if (navigationParameter == "nerezolvate")
+            {
+                Data = App.DataSource.GhicitoriNerezolvate;
+            }
+            else
+            {
+                Data = App.DataSource.GhicitoriRezolvate;
+            }
             this.DefaultViewModel["Items"] = Data;
             if (pageState == null)
             {
@@ -131,6 +139,7 @@ namespace Ghicitori.Pages
             // to showing the selected item's details.  When the selection is cleared this has the
             // opposite effect.
             if (this.UsingLogicalPageNavigation()) this.InvalidateVisualState();
+            CorrectAnswer.Visibility = Visibility.Collapsed;
         }
 
         /// <summary>
@@ -191,22 +200,29 @@ namespace Ghicitori.Pages
 
         #endregion
 
-        private void TextBox_KeyDown(object sender, KeyRoutedEventArgs e)
-        {
-
-        }
 
         private async void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             TextBox textbox = sender as TextBox;
-            if (textbox.Text == Data[itemListView.SelectedIndex].Answer)
+            if (Data[itemListView.SelectedIndex].CheckIfSolution(textbox.Text))
             {
                 await new MessageDialog("Felicitări ai rezolvat corect! Răspunsul a fost: " + textbox.Text).ShowAsync();
                 textbox.Text = "";
-                Data[itemListView.SelectedIndex].IsResolved = true;
-                Data.RemoveAt(itemListView.SelectedIndex);
+                if (Data[itemListView.SelectedIndex].IsResolved == false)
+                {
+                    Data[itemListView.SelectedIndex].IsResolved = true;
+                    Data.RemoveAt(itemListView.SelectedIndex);
+                }
                 itemListView.SelectedIndex++;
                 
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (CorrectAnswer.Visibility == Visibility.Collapsed)
+            {
+                CorrectAnswer.Visibility = Visibility.Visible;
             }
         }
     }

@@ -41,7 +41,7 @@
                     <ColumnDefinition Width="400"/>
                 </Grid.ColumnDefinitions>
                 <Button x:ConnectionId='1' Grid.Column="0" Width="280" HorizontalAlignment="Center" Content="Ghicitori nerezolvate"                               ></Button>
-                <Button Grid.Column="1" Width="280" HorizontalAlignment="Center" Content="Ghicitori deja rezolvate"></Button>
+                <Button x:ConnectionId='2' Grid.Column="1" Width="280" HorizontalAlignment="Center" Content="Ghicitori deja rezolvate"                     ></Button>
             </Grid>
         </Grid>
         <Grid x:Name="snappedMenu" Grid.Row="1" Visibility="Collapsed">

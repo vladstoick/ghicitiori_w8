@@ -34,7 +34,7 @@
             <StackPanel VerticalAlignment="Top" Margin="10,0,0,0">
                 
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                    <TextBlock Text="Nivelulul:    " Style="{StaticResource TitleTextStyle}" TextWrapping="NoWrap"/>
+                    <TextBlock Text="Nivelulul:&#160;" Style="{StaticResource TitleTextStyle}" TextWrapping="NoWrap"/>
                     <TextBlock Text="{Binding Id}" Style="{StaticResource TitleTextStyle}" TextWrapping="NoWrap"/>
                 </StackPanel>
 

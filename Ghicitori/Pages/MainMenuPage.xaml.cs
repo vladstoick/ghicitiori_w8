@@ -51,7 +51,12 @@ namespace Ghicitori.Pages
 
         private void NerezolvateButtonClick(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(GhicitoriPage));
+            this.Frame.Navigate(typeof(GhicitoriPage),"nerezolvate");
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(GhicitoriPage), "rezolvate");
         }
     }
 }

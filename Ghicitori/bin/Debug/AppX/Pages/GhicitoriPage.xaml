@@ -39,7 +39,7 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:ConnectionId='3'
+            <Button x:ConnectionId='4'
                 x:Name="backButton"
                               
                 IsEnabled="{Binding DefaultViewModel.CanGoBack, ElementName=pageRoot}"
@@ -76,15 +76,19 @@
             <Grid x:Name="itemDetailGrid" Margin="0,60,0,0" VerticalAlignment="Center">
                 <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" >
                     <TextBlock Text="{Binding Content}" FontSize="60" HorizontalAlignment="Center"/>
-                    <TextBox x:ConnectionId='2' HorizontalAlignment="Center" Width="600"                                                            ></TextBox>
+                    <TextBox x:ConnectionId='2' HorizontalAlignment="Center" Width="600"                                  ></TextBox>
                     <Grid Margin="0,40,0,0">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Button HorizontalAlignment="Center">Indiciu</Button>
+                        <Button x:ConnectionId='3' HorizontalAlignment="Center"                     >Indiciu</Button>
                         <Button Grid.Column="1" HorizontalAlignment="Center">Șterge</Button>
                     </Grid>
+                    <StackPanel Orientation="Horizontal" Margin="10" HorizontalAlignment="Center" x:Name="CorrectAnswer" Visibility="Collapsed">
+                        <TextBlock Text="Răspunsul corect este:&#160;" FontSize="30" HorizontalAlignment="Center"/>
+                        <TextBlock Text="{Binding Answer}" FontSize="30" />
+                    </StackPanel>
                 </StackPanel>
             </Grid>
         </ScrollViewer>

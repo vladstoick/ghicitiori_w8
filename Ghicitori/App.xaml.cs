@@ -1,5 +1,6 @@
 ﻿using Ghicitori.DataSource;
 using Ghicitori.Pages;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -86,6 +87,13 @@ namespace Ghicitori
         private void OnSuspending(object sender, SuspendingEventArgs e)
         {
             var deferral = e.SuspendingOperation.GetDeferral();
+            Windows.Storage.ApplicationDataContainer localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
+            string serialized = JsonConvert.SerializeObject(App.DataSource);
+            if (localSettings.Values.ContainsKey("ghicitori"))
+            {
+                localSettings.Values.Remove("ghicitori");
+            }
+            localSettings.Values["ghicitori"] = serialized;
             //TODO: Save application state and stop any background activity
             deferral.Complete();
         }

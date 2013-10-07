@@ -30,6 +30,20 @@ namespace Ghicitori.DataSource
 
             }
         }
+        public ObservableCollection<Ghicitoare> GhicitoriRezolvate
+        {
+            get
+            {
+                List<Ghicitoare> ghlist = ToateGhicitorile.Where(gh => gh.IsResolved == true).OrderBy(gh => gh.Id).ToList();
+                ObservableCollection<Ghicitoare> ghobs = new ObservableCollection<Ghicitoare>();
+                foreach (Ghicitoare gh in ghlist)
+                {
+                    ghobs.Add(gh);
+                }
+                return ghobs;
+
+            }
+        }
         public GhicitoriDataSource()
         {
             isDataLoaded = false;
@@ -117,10 +131,46 @@ namespace Ghicitori.DataSource
             }
             set
             {
-                _IsResoleved = IsResolved;
+                _IsResoleved = value;
+
                 OnPropertyChanged("IsResolved");
             }
         }
+        public char TransformIntoEnglishCar(char a)
+        {
+            if ( a == 'ă' || a == 'â' || a == 'Ă' || a == 'Â')
+            {
+                return 'a';
+            }
+            if ( a == 'ț' ||  a == 'Ț')
+            {
+                return 't';
+            }
+            if (a == 'ș' ||  a == 'Ș' || a == 'ş')
+            {
+                return 's';
+            }
+            if (a == 'î' ||  a == 'Î')
+            {
+                return 'i';
+            }
+            return char.ToLower(a);
 
+        }
+        public bool CheckIfSolution(string text){
+            //VERIFICARE LUNGIME
+            if (text.Length != Answer.Length)
+            {
+                return false;
+            }
+            for(int i=0; i < text.Length ; i++ )
+            {
+                if(TransformIntoEnglishCar(text[i])!=TransformIntoEnglishCar(Answer[i]))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
     }
 }

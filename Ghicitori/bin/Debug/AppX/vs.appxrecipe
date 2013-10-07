@@ -22,11 +22,11 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\Programming\C#\Ghicitori\Ghicitori\bin\Debug\Ghicitori.exe">
       <PackagePath>Ghicitori.exe</PackagePath>
-      <Modified>2013-10-07T12:04:04.349</Modified>
+      <Modified>2013-10-07T12:55:06.015</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Programming\C#\Ghicitori\Ghicitori\bin\Debug\Ghicitori.pdb">
       <PackagePath>Ghicitori.pdb</PackagePath>
-      <Modified>2013-10-07T12:04:04.332</Modified>
+      <Modified>2013-10-07T12:55:05.997</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Programming\C#\Ghicitori\packages\Newtonsoft.Json.5.0.6\lib\netcore45\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -70,7 +70,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Programming\C#\Ghicitori\Ghicitori\bin\Debug\Common\StandardStyles.xaml">
       <PackagePath>Common\StandardStyles.xaml</PackagePath>
-      <Modified>2013-10-07T11:21:20.368</Modified>
+      <Modified>2013-10-07T12:23:49.809</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Programming\C#\Ghicitori\Ghicitori\bin\Debug\MainPage.xaml">
       <PackagePath>MainPage.xaml</PackagePath>
@@ -78,11 +78,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Programming\C#\Ghicitori\Ghicitori\bin\Debug\Pages\GhicitoriPage.xaml">
       <PackagePath>Pages\GhicitoriPage.xaml</PackagePath>
-      <Modified>2013-10-07T11:54:09.542</Modified>
+      <Modified>2013-10-07T12:31:29.928</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Programming\C#\Ghicitori\Ghicitori\bin\Debug\Pages\MainMenuPage.xaml">
       <PackagePath>Pages\MainMenuPage.xaml</PackagePath>
-      <Modified>2013-10-06T18:10:28.342</Modified>
+      <Modified>2013-10-07T12:47:06.337</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Programming\C#\Ghicitori\Ghicitori\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
