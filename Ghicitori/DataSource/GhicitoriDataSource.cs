@@ -3,6 +3,7 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,7 +20,7 @@ namespace Ghicitori.DataSource
         {
             get
             {
-                List<Ghicitoare>  ghlist = ToateGhicitorile.Where(gh => gh.isResoleved == false).OrderBy(gh=> gh.Id).ToList();
+                List<Ghicitoare>  ghlist = ToateGhicitorile.Where(gh => gh.IsResolved == false).OrderBy(gh=> gh.Id).ToList();
                 ObservableCollection<Ghicitoare> ghobs = new ObservableCollection<Ghicitoare>();
                 foreach (Ghicitoare gh in ghlist)
                 {
@@ -73,7 +74,7 @@ namespace Ghicitori.DataSource
                         id = random.Next(0, ghicitori.Count);
                     }
                     gh.Id = id;
-                    gh.isResoleved = false;
+                    gh.IsResolved = false;
                     folosit.Add(id);
                     ToateGhicitorile.Add(gh);
                 }
@@ -86,6 +87,16 @@ namespace Ghicitori.DataSource
         public string Content { get; set; }
         public string Answer { get; set; }
         private int _Id { get; set; }
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void OnPropertyChanged(string name)
+        {
+            PropertyChangedEventHandler handler = PropertyChanged;
+            if (handler != null)
+            {
+                handler(this, new PropertyChangedEventArgs(name));
+            }
+        }
         public int Id
         {
             get
@@ -97,6 +108,19 @@ namespace Ghicitori.DataSource
                 _Id = value;
             }
         }
-        public bool isResoleved { get; set; }
+        private bool _IsResoleved { get; set; }
+        public bool IsResolved
+        {
+            get
+            {
+                return _IsResoleved;
+            }
+            set
+            {
+                _IsResoleved = IsResolved;
+                OnPropertyChanged("IsResolved");
+            }
+        }
+
     }
 }

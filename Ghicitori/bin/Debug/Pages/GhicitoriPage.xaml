@@ -39,7 +39,7 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:ConnectionId='2'
+            <Button x:ConnectionId='3'
                 x:Name="backButton"
                               
                 IsEnabled="{Binding DefaultViewModel.CanGoBack, ElementName=pageRoot}"
@@ -73,23 +73,19 @@
             DataContext="{Binding SelectedItem, ElementName=itemListView}"
             Style="{StaticResource VerticalScrollViewerStyle}">
 
-            <Grid x:Name="itemDetailGrid" Margin="0,60,0,50">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-
-                <Image Grid.Row="1" Margin="0,0,20,0" Width="180" Height="180" Source="{Binding Image}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}"/>
-                <StackPanel x:Name="itemDetailTitlePanel" Grid.Row="1" Grid.Column="1">
-                    <TextBlock x:Name="itemTitle" Margin="0,-10,0,0" Text="{Binding Title}" Style="{StaticResource SubheaderTextStyle}"/>
-                    <TextBlock x:Name="itemSubtitle" Margin="0,0,0,20" Text="{Binding Subtitle}" Style="{StaticResource SubtitleTextStyle}"/>
+            <Grid x:Name="itemDetailGrid" Margin="0,60,0,0" VerticalAlignment="Center">
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" >
+                    <TextBlock Text="{Binding Content}" FontSize="60" HorizontalAlignment="Center"/>
+                    <TextBox x:ConnectionId='2' HorizontalAlignment="Center" Width="600"                                                            ></TextBox>
+                    <Grid Margin="0,40,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button HorizontalAlignment="Center">Indiciu</Button>
+                        <Button Grid.Column="1" HorizontalAlignment="Center">Șterge</Button>
+                    </Grid>
                 </StackPanel>
-                <TextBlock Grid.Row="2" Grid.ColumnSpan="2" Margin="0,20,0,0" Text="{Binding Content}" Style="{StaticResource BodyTextStyle}"/>
             </Grid>
         </ScrollViewer>
 

@@ -1,9 +1,12 @@
-﻿using System;
+﻿using Ghicitori.DataSource;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -23,6 +26,7 @@ namespace Ghicitori.Pages
     /// </summary>
     public sealed partial class GhicitoriPage : Ghicitori.Common.LayoutAwarePage
     {
+        private ObservableCollection<Ghicitoare> Data;
         public GhicitoriPage()
         {
             this.InitializeComponent();
@@ -47,7 +51,8 @@ namespace Ghicitori.Pages
             {
                 await App.DataSource.LoadData();
             }
-            this.DefaultViewModel["Items"] = App.DataSource.GhicitoriNerezolvate;
+            Data = App.DataSource.GhicitoriNerezolvate;
+            this.DefaultViewModel["Items"] = Data;
             if (pageState == null)
             {
                 // When this is a new page, select the first item automatically unless logical page
@@ -185,5 +190,24 @@ namespace Ghicitori.Pages
         }
 
         #endregion
+
+        private void TextBox_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+
+        }
+
+        private async void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox textbox = sender as TextBox;
+            if (textbox.Text == Data[itemListView.SelectedIndex].Answer)
+            {
+                await new MessageDialog("Felicitări ai rezolvat corect! Răspunsul a fost: " + textbox.Text).ShowAsync();
+                textbox.Text = "";
+                Data[itemListView.SelectedIndex].IsResolved = true;
+                Data.RemoveAt(itemListView.SelectedIndex);
+                itemListView.SelectedIndex++;
+                
+            }
+        }
     }
 }
