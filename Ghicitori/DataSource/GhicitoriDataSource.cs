@@ -14,7 +14,7 @@ namespace Ghicitori.DataSource
 {
     public class GhicitoriDataSource
     {
-        private ObservableCollection<Ghicitoare> ToateGhicitorile = new ObservableCollection<Ghicitoare>();
+        public ObservableCollection<Ghicitoare> ToateGhicitorile = new ObservableCollection<Ghicitoare>();
         public bool isDataLoaded;
         public ObservableCollection<Ghicitoare> GhicitoriNerezolvate
         {
@@ -28,6 +28,18 @@ namespace Ghicitori.DataSource
                 }
                 return ghobs;
 
+            }
+        }
+        public List<int> _ResolvedGhicitori = new List<int>();
+        public List<int> ResolvedGhictiori
+        {
+            get
+            {
+                return _ResolvedGhicitori;
+            }
+            set
+            {
+                _ResolvedGhicitori = value;
             }
         }
         public ObservableCollection<Ghicitoare> GhicitoriRezolvate
@@ -54,45 +66,43 @@ namespace Ghicitori.DataSource
             if (localSettings.Values.ContainsKey("ghicitori"))
             {
                 string serializedobj = (string)localSettings.Values["ghicitori"];
-                ToateGhicitorile = (ObservableCollection<Ghicitoare>)JsonConvert.DeserializeObject(serializedobj);
+                ResolvedGhictiori = (List<int>)JsonConvert.DeserializeObject<List<int>>(serializedobj);
             }
-            else
+            Windows.Storage.StorageFolder localFolder = Windows.ApplicationModel.Package.Current.InstalledLocation;
+            StorageFile file = await localFolder.GetFileAsync("data.json");
+            string data = "";
+            if (file != null)
             {
-
-                Windows.Storage.StorageFolder localFolder = Windows.ApplicationModel.Package.Current.InstalledLocation;
-                StorageFile file = await localFolder.GetFileAsync("data.json");
-                string data = "";
-                if (file != null)
-                {
-                    IBuffer buffer = await FileIO.ReadBufferAsync(file);
-                    DataReader reader = DataReader.FromBuffer(buffer);
-                    byte[] fileContent = new byte[reader.UnconsumedBufferLength];
-                    reader.ReadBytes(fileContent);
-                    data = Encoding.UTF8.GetString(fileContent, 0, fileContent.Length);
-                }
-                //String data = await FileIO.ReadTextAsync(file);
-                JArray ghicitori = JArray.Parse(data);
-                Random random = new Random();
-                List<int> folosit = new List<int>();
-         
-                foreach (JObject ghicitoare in ghicitori)
-                {
-                    string content = (string)ghicitoare.GetValue("content");
-                    string answer = (string)ghicitoare.GetValue("answer");
-                    Ghicitoare gh = new Ghicitoare();
-                    gh.Content = content;
-                    gh.Answer = answer;
-                    int id = random.Next(0, ghicitori.Count);
-                    while (folosit.Contains(id))
-                    {
-                        id = random.Next(0, ghicitori.Count);
-                    }
-                    gh.Id = id;
-                    gh.IsResolved = false;
-                    folosit.Add(id);
-                    ToateGhicitorile.Add(gh);
-                }
+                IBuffer buffer = await FileIO.ReadBufferAsync(file);
+                DataReader reader = DataReader.FromBuffer(buffer);
+                byte[] fileContent = new byte[reader.UnconsumedBufferLength];
+                reader.ReadBytes(fileContent);
+                data = Encoding.UTF8.GetString(fileContent, 0, fileContent.Length);
             }
+            //String data = await FileIO.ReadTextAsync(file);
+            JArray ghicitori = JArray.Parse(data);
+            Random random = new Random();
+            List<int> folosit = new List<int>();
+         
+            foreach (JObject ghicitoare in ghicitori)
+            {
+                string content = (string)ghicitoare.GetValue("content");
+                string answer = (string)ghicitoare.GetValue("answer");
+                Ghicitoare gh = new Ghicitoare();
+                gh.Content = content;
+                gh.Answer = answer;
+                int id = random.Next(0, ghicitori.Count);
+                while (folosit.Contains(id))
+                {
+                    id = random.Next(0, ghicitori.Count);
+                }
+                gh.Id = id;
+                gh.IsResolved = ResolvedGhictiori.Contains(id);
+                folosit.Add(id);
+                ToateGhicitorile.Add(gh);
+            }
+            localSettings.Values["ghicitori"] = JsonConvert.SerializeObject(ResolvedGhictiori);
+            
             isDataLoaded = true;
         }
     }

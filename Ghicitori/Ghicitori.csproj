@@ -130,6 +130,8 @@
     </Content>
     <None Include="Ghicitori_TemporaryKey.pfx" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Ghicitori.DataSource.Ghicitoare.datasource" />
+    <None Include="Properties\DataSources\Ghicitori.DataSource.GhicitoriDataSource.datasource" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\black_lozenge_%402X.png" />

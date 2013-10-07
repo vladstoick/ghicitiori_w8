@@ -88,7 +88,7 @@ namespace Ghicitori
         {
             var deferral = e.SuspendingOperation.GetDeferral();
             Windows.Storage.ApplicationDataContainer localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
-            string serialized = JsonConvert.SerializeObject(App.DataSource);
+            string serialized = JsonConvert.SerializeObject(App.DataSource.ResolvedGhictiori);
             if (localSettings.Values.ContainsKey("ghicitori"))
             {
                 localSettings.Values.Remove("ghicitori");

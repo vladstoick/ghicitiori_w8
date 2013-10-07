@@ -52,7 +52,7 @@ namespace Ghicitori.Pages
             {
                 await App.DataSource.LoadData();
             }
-            if (navigationParameter == "nerezolvate")
+            if ((string)navigationParameter == "nerezolvate")
 
             {
                 pageTitle.Text = "Nerezolvatee";
@@ -214,7 +214,9 @@ namespace Ghicitori.Pages
                 if (Data[itemListView.SelectedIndex].IsResolved == false)
                 {
                     Data[itemListView.SelectedIndex].IsResolved = true;
+                    App.DataSource.ResolvedGhictiori.Add(Data[itemListView.SelectedIndex].Id);
                     Data.RemoveAt(itemListView.SelectedIndex);
+                    
                 }
                 itemListView.SelectedIndex++;
                 

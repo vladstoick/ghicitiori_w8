@@ -46,17 +46,20 @@
         </Grid>
         <Grid x:Name="snappedMenu" Grid.Row="1" Visibility="Collapsed">
             <Grid.RowDefinitions>
-                <RowDefinition Height="100"/>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="50">Ghicitori</TextBlock>
+            <StackPanel Margin="15">
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe Script" FontSize="50">Ghicitori</TextBlock>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe Script" FontSize="20" TextWrapping="Wrap">Cele mai cunoscute ghicitori românești</TextBlock>
+            </StackPanel>
             <Grid Grid.Row="1">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="50"/>
                    </Grid.RowDefinitions>
-                <Button Grid.Row="0" Width="190" HorizontalAlignment="Center" Content="Nerezolvate"></Button>
-                <Button Grid.Row="1" Width="190" HorizontalAlignment="Center" Content="Rezolvate"></Button>
+                <Button Grid.Row="0" Width="190" HorizontalAlignment="Center" Content="Nerezolvate" Click="NerezolvateButtonClick"></Button>
+                <Button Grid.Row="1" Width="190" HorizontalAlignment="Center" Content="Rezolvate" Click="Button_Click"></Button>
 
             </Grid>
         </Grid>
