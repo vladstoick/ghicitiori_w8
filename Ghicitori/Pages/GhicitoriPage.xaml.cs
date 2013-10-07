@@ -218,17 +218,25 @@ namespace Ghicitori.Pages
                     Data.RemoveAt(itemListView.SelectedIndex);
                     
                 }
-                itemListView.SelectedIndex++;
+                if (itemListView.SelectedIndex + 1 < Data.Count)
+                {
+                    itemListView.SelectedIndex++;
+                }
                 
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Indiciu_Clicked(object sender, RoutedEventArgs e)
         {
             if (CorrectAnswer.Visibility == Visibility.Collapsed)
             {
                 CorrectAnswer.Visibility = Visibility.Visible;
             }
+        }
+
+        private void Delete_Clicked(object sender, RoutedEventArgs e)
+        {
+            TextBox.Text = ""; 
         }
     }
 }

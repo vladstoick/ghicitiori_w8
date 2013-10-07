@@ -75,15 +75,15 @@
 
             <Grid x:Name="itemDetailGrid" Margin="0,60,0,0" VerticalAlignment="Center">
                 <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" >
-                    <TextBlock Text="{Binding Content}" FontSize="60" HorizontalAlignment="Center"/>
-                    <TextBox HorizontalAlignment="Center" Width="600" TextChanged="TextBox_TextChanged"></TextBox>
+                    <TextBlock Text="{Binding Content}" FontSize="40" HorizontalAlignment="Center" TextWrapping="Wrap"/>
+                    <TextBox HorizontalAlignment="Center" Width="550" TextChanged="TextBox_TextChanged" x:Name="TextBox"></TextBox>
                     <Grid Margin="0,40,0,0">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Button HorizontalAlignment="Center" Click="Button_Click">Indiciu</Button>
-                        <Button Grid.Column="1" HorizontalAlignment="Center">Șterge</Button>
+                        <Button HorizontalAlignment="Center" Click="Indiciu_Clicked">Indiciu</Button>
+                        <Button Grid.Column="1" HorizontalAlignment="Center" Click="Delete_Clicked">Șterge</Button>
                     </Grid>
                     <StackPanel Orientation="Horizontal" Margin="10" HorizontalAlignment="Center" x:Name="CorrectAnswer" Visibility="Collapsed">
                         <TextBlock Text="Răspunsul corect este:&#160;" FontSize="30" HorizontalAlignment="Center"/>

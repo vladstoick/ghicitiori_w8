@@ -81,9 +81,7 @@ namespace Ghicitori.DataSource
             }
             //String data = await FileIO.ReadTextAsync(file);
             JArray ghicitori = JArray.Parse(data);
-            Random random = new Random();
-            List<int> folosit = new List<int>();
-         
+            int id = 0;        
             foreach (JObject ghicitoare in ghicitori)
             {
                 string content = (string)ghicitoare.GetValue("content");
@@ -91,14 +89,9 @@ namespace Ghicitori.DataSource
                 Ghicitoare gh = new Ghicitoare();
                 gh.Content = content;
                 gh.Answer = answer;
-                int id = random.Next(0, ghicitori.Count);
-                while (folosit.Contains(id))
-                {
-                    id = random.Next(0, ghicitori.Count);
-                }
                 gh.Id = id;
                 gh.IsResolved = ResolvedGhictiori.Contains(id);
-                folosit.Add(id);
+                id++;
                 ToateGhicitorile.Add(gh);
             }
             localSettings.Values["ghicitori"] = JsonConvert.SerializeObject(ResolvedGhictiori);
